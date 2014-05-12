@@ -78,7 +78,12 @@ namespace SyllogismValidatorWPF
 
         private void SearchButton_Click(object sender, RoutedEventArgs e)
         {
-
+            if (SearchTextBox.Text != string.Empty)
+            {
+                int id = Syllogisms.Where(u => u.Name == SearchTextBox.Text.ToUpper()).Select(u => u.Id).FirstOrDefault();
+                var SyllogismWindow = new SyllogismWindow(Syllogisms[id]);
+                SyllogismWindow.Show();
+            }
         }
 
         private void SyllogismTable_BeginningEdit(object sender, DataGridBeginningEditEventArgs e)

@@ -36,7 +36,7 @@ namespace SyllogismValidatorWPF
             this.ConclusionText.Content = s.Conclusion.Write();
             if(!s.isValid)
             {
-                //this.BrokenRuleText.Content = string.Format("Invalid due to Rule " + s.BrokenRule);
+                this.BrokenRuleText.Content = string.Format("Rule " + s.BrokenRule);
             }
         }
     }

@@ -36,11 +36,11 @@ namespace SyllogismValidatorWPF
             Mood = mood;
             Subject = sub;
             Predicate = pred;
-            Copula = "   is   ";
+            Copula = " is ";
             switch (mood)
             {
                 case Mood.A:
-                    Quantifier = "All  ";
+                    Quantifier = "All ";
                     isUniversal = true;
                     isNegative = false;
                     if (isConclusion)
@@ -58,7 +58,7 @@ namespace SyllogismValidatorWPF
                     }
                     break;
                 case Mood.E:
-                    Quantifier = "No   ";
+                    Quantifier = "No ";
                     isUniversal = true;
                     isNegative = true;
                     if (isConclusion)

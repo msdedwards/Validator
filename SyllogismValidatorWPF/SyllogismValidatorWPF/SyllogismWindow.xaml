@@ -1,18 +1,18 @@
 ﻿<Window x:Class="SyllogismValidatorWPF.SyllogismWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="SyllogismWindow" Height="300" Width="300" ResizeMode="NoResize">
+        Title="SyllogismWindow" Height="269.885" Width="251.351" ResizeMode="NoResize">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="89*"/>
             <ColumnDefinition Width="57*"/>
         </Grid.ColumnDefinitions>
         <Label x:Name="SyllogismName" Content="Label" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="136" Height="65" FontSize="40" VerticalContentAlignment="Center"/>
-        <Label x:Name="MajorPremiseText" Content="Label" HorizontalAlignment="Left" Margin="10,80,0,0" VerticalAlignment="Top" Width="272" Grid.ColumnSpan="2" Height="41" FontSize="20" HorizontalContentAlignment="Center"/>
-        <Label x:Name="MinorPremiseText" Content="Label" HorizontalAlignment="Left" Margin="10,121,0,0" VerticalAlignment="Top" Width="272" Grid.ColumnSpan="2" Height="40" FontSize="20" HorizontalContentAlignment="Center"/>
-        <Label x:Name="ConclusionText" Content="Label" HorizontalAlignment="Left" Margin="10,161,0,0" VerticalAlignment="Top" Width="272" Grid.ColumnSpan="2" Height="40" FontSize="20" HorizontalContentAlignment="Center"/>
-        <Label x:Name="ValidText" Content="Label" HorizontalAlignment="Left" Margin="151,10,0,0" VerticalAlignment="Top" Width="131" Height="65" FontSize="24" VerticalContentAlignment="Center" Grid.ColumnSpan="2"/>
-        <Label x:Name="BrokenRuleText" Content="" HorizontalAlignment="Left" Margin="10,206,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="272"/>
+        <Label x:Name="MajorPremiseText" Content="Label" Margin="10,88,10,111" Grid.ColumnSpan="2" FontSize="20" HorizontalContentAlignment="Center"/>
+        <Label x:Name="MinorPremiseText" Content="Label" Margin="10,135,10,60" Grid.ColumnSpan="2" FontSize="20" HorizontalContentAlignment="Center"/>
+        <Label x:Name="ConclusionText" Content="Label" Margin="10,181,10,16" Grid.ColumnSpan="2" FontSize="20" HorizontalContentAlignment="Center"/>
+        <Label x:Name="ValidText" Content="Label" HorizontalAlignment="Left" Margin="2,10,0,0" VerticalAlignment="Top" Width="84" Height="65" FontSize="24" VerticalContentAlignment="Center" Grid.Column="1" HorizontalContentAlignment="Center"/>
+        <Label x:Name="BrokenRuleText" Content="" Margin="10,0,10,146" Height="26" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" Grid.Column="1"/>
 
     </Grid>
 </Window>
