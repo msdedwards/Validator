@@ -1,0 +1,38 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(50px, 1fr));
+    grid-auto-rows: 1fr;
+    grid-gap: 3px;
+}
+
+.grid::before {
+    content: '';
+    width: 0;
+    padding-bottom: 100%;
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+}
+
+.grid > *:first-child {
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+}
+
+.cell {
+    background-color: antiquewhite;
+}
+$mood: A E I O;
+$i: 0;
+@each $m1 in $mood {
+    @each $m2 in $mood {
+        @each $m3 in $mood {
+            @for $figure from 1 to 5 {
+                $syllogism: $m1 + $m2 + $m3 + $figure;
+                .#{$syllogism} {
+                    background-color: hsl($i,50, 50);
+                }
+                $i: ($i + 1) * 300/256;
+            }
+        }
+    }
+}
