@@ -31,7 +31,7 @@ $i: 0;
                 .#{$syllogism} {
                     background-color: hsl($i,50, 50);
                 }
-                $i: ($i + 1) * 300/256;
+                $i: $i + 1;
             }
         }
     }
