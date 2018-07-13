@@ -1,3 +1,9 @@
+@keyframes stretch {
+    100% {
+      transform: scale(1.5);
+    }
+  }
+
 .grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(50px, 1fr));
@@ -20,6 +26,22 @@
 
 .cell {
     background-color: antiquewhite;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 100%;
+}
+.cell.expanded {
+    .element {
+        animation: 
+          stretch
+          1.5s
+          ease-out
+          0s
+          alternate
+          infinite
+          none
+          running;
+      }
 }
 $mood: A E I O;
 $i: 0;

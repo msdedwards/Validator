@@ -13,6 +13,7 @@ export class Syllogism {
     public brokenRule: number;
     public description: string;
     public cssClass: string;
+    public expanded = false;
 
     constructor(public id: number, public firstMood: Mood, public secondMood: Mood, public conclusionMood: Mood, public figure: number) {
         this.name = this.getName();

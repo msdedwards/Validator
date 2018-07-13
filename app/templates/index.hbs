@@ -1,6 +1,6 @@
 <section class="grid">
     {{#each model as |syllogism|}}
-        <div class="cell {{syllogism.cssClass}}">
+        <div class="cell {{syllogism.cssClass}} {{if syllogism.expanded 'expanded' ''}}" {{action 'expand' syllogism}}>
             {{syllogism.name}}
         </div>
     {{/each}}
