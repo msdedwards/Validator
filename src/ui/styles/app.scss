@@ -9,6 +9,11 @@ body {
   font-family: "system";
 }
 
+object {
+  width: 24px;
+  height: 24px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(50px, 100px));
@@ -39,6 +44,7 @@ body {
   height: 100%;
   background: none;
   border: none;
+  font-size: 2rem;
 }
 
 .detail {

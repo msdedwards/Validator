@@ -6,11 +6,11 @@
 {{#if expanded}}
     <div class="detail {{currentSyllogism.name}}">
         <button class="close" onclick={{action toggle}}>
-            <object type="image/svg+xml" data="x.svg">Your browser does not support SVG files</object>
+            <Svg-icon @name="x" />
         </button>
         <div class="info">
             <h1>
-                {{currentSyllogism.name}}{{#if currentSyllogism.isValid}}{{{svg "check-circle"}}}{{/if}}
+                {{currentSyllogism.name}}{{#if currentSyllogism.isValid}} <Svg-icon @name="check-circle"/>{{/if}}
             </h1>
             <ul class="syllogism">
                 <li>{{currentSyllogism.firstProposition.description}}</li>
@@ -18,8 +18,7 @@
                 <li>{{currentSyllogism.conclusion.description}}</li>
             </ul>
             <div class="validity">
-                Valid Syllogism: {{currentSyllogism.isValid}}
-
+                Syllogism is {{if currentSyllogism.isValid "valid" "invalid"}}
             </div>
         </div>
     </div>
