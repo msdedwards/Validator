@@ -1,1 +1,26 @@
-<div><h1>Welcome to Glimmer!</h1></div>
+<section class="grid">
+    {{#each syllogisms key="@index" as |syllogism|}}
+        <Card @syllogism={{syllogism}} @toggle={{action toggle syllogism}} />
+    {{/each}}
+</section>
+{{#if expanded}}
+    <div class="detail {{currentSyllogism.name}}">
+        <button class="close" onclick={{action toggle}}>
+            <object type="image/svg+xml" data="x.svg">Your browser does not support SVG files</object>
+        </button>
+        <div class="info">
+            <h1>
+                {{currentSyllogism.name}}{{#if currentSyllogism.isValid}}{{{svg "check-circle"}}}{{/if}}
+            </h1>
+            <ul class="syllogism">
+                <li>{{currentSyllogism.firstProposition.description}}</li>
+                <li>{{currentSyllogism.secondProposition.description}}</li>
+                <li>{{currentSyllogism.conclusion.description}}</li>
+            </ul>
+            <div class="validity">
+                Valid Syllogism: {{currentSyllogism.isValid}}
+
+            </div>
+        </div>
+    </div>
+{{/if}}
